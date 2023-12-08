@@ -1,0 +1,3 @@
+Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "text/html". Strict MIME type checking is enforced for module scripts per HTML spec.
+- declared paths based on vscode path extension for .js files, and follow regular/expected paths in html files
+- converted all module js files to .mjs extension

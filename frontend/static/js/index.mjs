@@ -88,16 +88,19 @@ async function router() {
     //if match is false/undefined, meaning no pre-defined path in 'route' matches the current browser path
     //sets match to a default path aka home
     if (!match) {
+        console.log("hi");
         match = {
             route: routes[0],
             result: routes[0].path //change path to home
         };
+        console.log(match.route.view);
     }
 
     //route has a 'view' property. invokes the view() constructor aka creating a new view object
     //element returned from getParams(match) is paramter for view constructor
     //where did we defined view constructor? default object constructor?
     const view = new match.route.view();
+    console.log(view.getHtml());
     document.querySelector("#app").innerHTML = await view.getHtml();
 
 

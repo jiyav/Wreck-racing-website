@@ -247,3 +247,22 @@
     display: flex;
     font-size: 6rem; 
   }*/
+
+  /* ------------------------------home.html---------------------------------- */
+
+  #photo-gallery {
+    width: 203px;
+    height: 52px;
+    background-color:  rgba(255, 234, 0, 1);
+  }
+
+  #photo-gallery img {
+    width: 203px;
+    height: 52px;
+  }
+
+  .wreck-description {
+    width: 400px;
+    height: 400px;
+    background-color: black;
+  }

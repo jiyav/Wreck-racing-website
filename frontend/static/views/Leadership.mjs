@@ -2,8 +2,8 @@ import AbstractView from "./AbstractView.mjs";
 
 export default class extends AbstractView {
     constructor() {
-        super();
-        this.setTitle("Dashboard");
+        super("Leadership");
+        
     }
 
     async getHtml() {

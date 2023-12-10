@@ -108,8 +108,8 @@
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
   .content {
     transition: margin-left .5s;
-    margin-left: 10px;
-    padding: 1px 16px;
+    margin-left: 0px;
+    padding: 1px 1px;
     height: 1000px;
   }
   
@@ -133,7 +133,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     
   }
   
@@ -250,19 +250,52 @@
 
   /* ------------------------------home.html---------------------------------- */
 
+
   #photo-gallery {
-    width: 203px;
-    height: 52px;
+    display: flex;
+    /* justify-content: space-between; */
+ /* Items will be placed at the start and end of the container */
+    align-items: center; /* Center items vertically */
+    position: relative;
     background-color:  rgba(255, 234, 0, 1);
+    width: 50%;
+    height: auto;
+  }
+
+  /* need to center the arrow, likely use another div icon instead of text */
+  .arrow-buttons {
+    top: 50%;
+    background-color: transparent;
+    color: white;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    position: absolute;
+    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.721);;
+    color: black;
+  }
+
+  .right-button {
+    right: 10px;
+  }
+
+  .left-button {
+    left: 10px;
   }
 
   #photo-gallery img {
-    width: 203px;
-    height: 52px;
+    max-width: 100%;
+    height: auto;
   }
 
   .wreck-description {
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    height: auto;
     background-color: black;
   }

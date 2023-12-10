@@ -9,6 +9,19 @@ app.get("/static/views/home.html", (req, res) => {
     res.sendFile(path.resolve(__dirname, "views", "home.html"));
 });
 
+app.get("/static/views/contact.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views", "contact.html"));
+});
+app.get("/static/views/gallery.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views", "gallery.html"));
+});
+app.get("/static/views/leadership.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views", "leadership.html"));
+});
+app.get("/static/views/projects.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views", "projects.html"));
+});
+
 app.get("/*", (req, res) => {
     //sends path back to GET requests from fetch API
     //so all incoming path's will be given the content of index.html

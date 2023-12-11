@@ -1,6 +1,4 @@
 var boxElement = document.getElementById("box");
-
-
 var isOpen = false; //starts off as false!
 
   // Define the toggle function
@@ -48,4 +46,37 @@ var isOpen = false; //starts off as false!
     }
 
     isOpen = false;
+}
+
+
+// ------------------------------------JS for home.html----------------------------------------- 
+
+/*
+need to grab all of the images under the ? element and put in arraylist
+grab all elements with the 'stacked-image' class
+start the pointer off at 0 each time page is reloaded
+this method will be applied to both arrows so check what direction arrow head is pointing first
+when the right arrow is clicked, move once in arraylist and set that element's visibility to true
+when left is clicked, move back in arraylst and set that elemen't visibility to true
+make sure the pointers will wrap around
+*/
+var index = 0;
+var children = document.getElementsByClassName('stacked-image');
+
+function swipeLeft() {
+  children.item(index).style.visibility = 'hidden';
+  index--;
+  if (index < 0) {
+    index = children.length - 1;
+  }
+  children.item(index).style.visibility = 'visible';
+}
+
+function swipeRight() {
+  children.item(index).style.visibility = 'hidden';
+  index++;
+  if (index > children.length - 1) {
+    index = 0;
+  }
+  children.item(index).style.visibility = 'visible';
 }

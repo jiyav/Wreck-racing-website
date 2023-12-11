@@ -252,28 +252,49 @@
 
 
   #photo-gallery {
-    display: flex;
-    /* justify-content: space-between; */
- /* Items will be placed at the start and end of the container */
-    align-items: center; /* Center items vertically */
-    position: relative;
+    display: grid;
+    place-items: center; /* Center items vertically */
     background-color:  rgba(255, 234, 0, 1);
-    width: 50%;
+    max-width: 50%;
     height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
+
+  #pic1, #pic2, #pic3, #pic4 {
+    max-width: 100%;
+    height: auto;
+    grid-area: 1 / 1;
+  }
+
+  /* #pic2 {
+    max-width: 100%;
+    height: auto;
+    grid-area: 1 / 1;
+  } 
+
+  #pic3 {
+    max-width: 100%;
+    height: auto;
+    grid-area: 1 / 1;
+  }
+
+  #pic4 {
+    max-width: 100%;
+    height: auto;
+    grid-area: 1 / 1;
+  } */
 
   /* need to center the arrow, likely use another div icon instead of text */
   .arrow-buttons {
+    position: relative;
     top: 50%;
     background-color: transparent;
     color: white;
     height: 50px;
     width: 50px;
-    z-index: 1;
-    position: absolute;
-    
-    justify-content: center;
-    align-items: center;
+    z-index: 10;
+    text-align: center;
   }
 
   .arrow-buttons:hover {
@@ -289,10 +310,7 @@
     left: 10px;
   }
 
-  #photo-gallery img {
-    max-width: 100%;
-    height: auto;
-  }
+
 
   .wreck-description {
     width: 50%;

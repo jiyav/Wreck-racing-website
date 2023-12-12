@@ -6,9 +6,7 @@ export default class extends AbstractView {
         
     }
 
-    async getHtml() {
-        return fetchAndExtractBody('gallery.html');
-    }
+   
 
 }
 

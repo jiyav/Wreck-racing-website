@@ -102,6 +102,11 @@ async function router() {
     const view = new match.route.view();
     console.log(view.getHtml());
     document.querySelector("#app").innerHTML = await view.getHtml();
+    document.querySelector("#script").src = await view.getScripts();
+    
+    
+  
+    console.log("the html now bitch" + document.body.innerHTML);
 
 
 }

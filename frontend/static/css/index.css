@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;1,400&display=swap');
 * {
     box-sizing: border-box;
     margin:0;
@@ -6,6 +7,7 @@
     
   }
   .hamburger-box {
+    position: fixed;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -33,6 +35,7 @@
     width: 70%;
     height: 11%;
     margin: 6%;
+    border-radius: 3px;
     transition: background-color 0.7s ease, transform 0.5s ease;
     
    }
@@ -94,13 +97,13 @@
     padding: 20px;
     font-size: x-large;
     text-decoration: none;
-    font-family: Karla, sans-serif;
+    font-family: Karla-Regular, sans-serif;
     
   }
   
   /* Links on mouse-over */
   .sidebar a:hover {
-    background-color: rgb(0, 89, 255);
+    background-color: rgb(77, 78, 80);
     color: white;
   }
   
@@ -133,8 +136,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 40px;
     
+  }
+
+  .margin-top {
+    margin-top: 40px;
   }
   
   .flex {
@@ -149,7 +156,7 @@
   
   .background {
     background-image: linear-gradient(60deg,rgb(255, 20, 3), rgb(254, 237, 54));
-    height: 250px;
+    height: 290px;
     border-bottom: 3px solid red;
 
   }
@@ -181,9 +188,14 @@
   }
   
   @font-face {
-    font-family: 'Karla';
+    font-family: 'Karla-Regular';
     src: url('font/karla/Karla-Regular.ttf') format('truetype'),
-         url('font/karla/Karla-Bold.ttf') format('truetype');
+         
+  }
+
+  @font-face {
+    font-family: 'Karla-Bold';
+    src: url('font/karla/Karla-Bold.ttf') format('truetype');
   }
 
   @font-face {
@@ -214,20 +226,21 @@
   .buttons a {
     width: 200px;
     height: 50px;
-    background-color: rgb(0, 89, 255);
-    color: white;
+    background-color: rgb(255, 247, 0);
+    color: black;
     font-size: 30px;
-    font-family: Karla;
+    font-family: Karla-Regular;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     padding: 5px;
     border: 1px solid black;
+    border-radius: 5px;
   }
   
   .buttons a:hover {
-    background-color:  rgba(255, 234, 0, 1);
-    color: black;
+    background-color:  rgb(3, 36, 249);
+    color: white;
     
   }
   
@@ -237,17 +250,21 @@
 
   #photo-gallery {
     display: grid;
-    background-color:  rgba(255, 234, 0, 1);
+    background-color:  rgb(0, 0, 0);
     max-width: 50%;
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
   }
 
   #pic1, #pic2, #pic3, #pic4 {
     max-width: 100%;
     height: auto;
     grid-area: 1 / 1;
+    border-radius: 30px;
+    padding: 15px;
   }
 
   #pic1 {
@@ -296,8 +313,61 @@
     justify-self: start;
   }
 
+  /* -------------------------------------welcome to wreck racing text-------------------- */
   .wreck-description {
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
     height: auto;
-    background-color: black;
+    background-color: white;
   }
+
+  .typed-element {
+    color: black;
+  }
+  
+  .wreck-description h1 {
+    margin-top: 20px;
+    font-size: 1em;
+    font-family: Karla-Bold, sans-serif;
+  }
+
+  .wreck-description h2 {
+    font-size: 0.8em;
+    font-family: Karla, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  .wreck-description p {
+    font-size: 0.68em;
+    font-family: Karla, sans-serif;
+    font-weight: 200;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+  }
+
+  /* ------------------------------OUR MEMBERS DESCRIPTION-------------------------------- */
+  .line-break {
+    height: 2px; /* Set the height of the line */
+    border: none; /* Remove the default border */
+    background: linear-gradient(to right, #333 50%, transparent 50%); /* Create a repeating linear gradient */
+    background-size: 10px 2px; /* Set the size of each dash and space segment */
+    width: 60%; /* Set the width to 50% of the container width */
+    margin: 40px auto; /* Center the horizontal rule and add margin above and below */
+}
+  .our-members {
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Karla-Bold, sans-serif;
+    margin-top: 40px;
+
+
+  }
+  

@@ -1,5 +1,6 @@
-//import { fetchAndExtractBody } from '../js/utility.mjs';
+//import { fetchAndExtractScript } from '../js/utility.mjs';
 import AbstractView from "./AbstractView.mjs";
+
 
 export default class extends AbstractView {
     constructor() {
@@ -9,6 +10,12 @@ export default class extends AbstractView {
     // async getHtml() {   
     //     return fetchAndExtractBody('/static/views/home.html');
     // }
+
+    async getScripts() {
+        var str = "/static/js/bundle.js";
+        console.log("hello ru working?" + str);
+        return str;
+    }
 
     
 }

@@ -1,4 +1,5 @@
 var boxElement = document.getElementById("box");
+var content = document.getElementById("content");
 var isOpen = false; //starts off as false!
 
   // Define the toggle function
@@ -48,6 +49,12 @@ var isOpen = false; //starts off as false!
     isOpen = false;
 }
 
+content.addEventListener("click", closeSideBar);
+
+
+
+
+
 
 // ------------------------------------JS for home.html----------------------------------------- 
 
@@ -80,3 +87,19 @@ function swipeRight() {
   }
   children.item(index).style.visibility = 'visible';
 }
+
+
+var spanner = document.getElementById('typed-element');
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,12 +1,16 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+//browserify typer.js -o bundle.js
+
 var Typed = require("typed.js");
-
-// C:\Users\jiyaw\Desktop\WreckRacingSite\node_modules\typed.js\dist\typed.module.js
-
 var typed = new Typed("#typed-element", {
-strings: ["Welcome to Wreck Racing", "Come join our team"],
-typeSpeed: 50,
+  strings: ["Welcome to Wreck Racing", "Do you like cars?","Come join our team!"],
+  typeSpeed: 25,
+  backSpeed: 17, //smaller values are faster 
+  loop: true,
+  cursorChar: '|'
   });
+
+  console.log("typer.js is being run again biatch");
 
 
 

@@ -88,7 +88,6 @@ function swipeRight() {
   children.item(index).style.visibility = 'visible';
 }
 
-
 var spanner = document.getElementById('typed-element');
 
 

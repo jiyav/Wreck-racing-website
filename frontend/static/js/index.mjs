@@ -115,10 +115,15 @@ async function router() {
 
 window.addEventListener("popstate", router);
 
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
-            e.preventDefault();
+            //e.preventDefault(); page MUST be reloaded for typer.js to fire each time :/
+            //blanket fix for now. will figure out how to make typer.js work for SPA framework
             navigateTo(e.target.href);
         }
     });

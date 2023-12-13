@@ -1,3 +1,10 @@
 Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "text/html". Strict MIME type checking is enforced for module scripts per HTML spec.
 - declared paths based on vscode path extension for .js files, and follow regular/expected paths in html files
 - converted all module js files to .mjs extension
+
+
+in order for typer.js library to fire each time a navigation button is clicked, we must reload the
+html file/scripts. had to get rid of the preventDefault() method in the router. I think this is a 
+blanket fix for now, i'll figure out later how to maintain the SPA framework using this effect. 
+
+so as of now we are no longer really an SPA due to the page reloads!

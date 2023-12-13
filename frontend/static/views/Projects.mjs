@@ -15,4 +15,11 @@ export default class extends AbstractView {
             
     //     `;
     // }
+
+    async getScripts() {
+        var str = "/static/js/bundle.js";
+        console.log("hello ru working?" + str);
+        return str;
+    }
+
 }

@@ -3,13 +3,14 @@
 
 var Typed = require("typed.js");
 var typed = new Typed("#typed-element", {
-  strings: ["Welcome to Wreck Racing", "Do you like cars?","Come join our team!"],
+  strings: ["Do you like cars?","Join Wreck Racing!"],
   typeSpeed: 25,
   backSpeed: 17, //smaller values are faster 
   loop: true,
-  cursorChar: '|'
+  cursorChar: 'I'
   });
 
+  
   console.log("typer.js is being run again biatch");
 
 

@@ -129,6 +129,7 @@
     display: flex; 
     flex-direction: row;
     justify-content: center;
+    align-content: center;
   }
   
   
@@ -239,27 +240,37 @@
   }
   
   .buttons a:hover {
-    background-color:  rgb(3, 36, 249);
+    background-color:  rgb(0, 0, 0);
     color: white;
+    /* border: 1px solid white; */
     
   }
   
 
   /* ------------------------------home.html---------------------------------- */
 
+  #home-page {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 95vh;
+  }
 
   #photo-gallery {
     display: grid;
-    background-color:  rgb(0, 0, 0);
-    max-width: 50%;
-    height: auto;
+   
+    max-width: 48%;
+    height: 70%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
+    
+    
   }
 
-  #pic1, #pic2, #pic3, #pic4 {
+  .stacked-image {
+    position: relative;
     max-width: 100%;
     height: auto;
     grid-area: 1 / 1;
@@ -320,17 +331,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    height: auto;
+    box-sizing: border-box;
+    width: 48%;
+    height: 70%;
     background-color: white;
-    font-size: 40px;
+    font-size: 2.3vw;
   }
 
   /* theres a difference between wrapping something in a div vs applying the effects directly to it */
   .center {
-    font-family: Karla-Regular, Helvetica, sans-serif;
+    font-family: Karla-Bold, Helvetica, sans-serif;
     font-size: 60px;
-    margin-top: 60px; 
+    margin-top: 10px; 
   }
 
   #typed-element {
@@ -341,7 +353,7 @@
 
   
   .wreck-description h1 {
-    margin-top: 20px;
+    
     font-size: 1em;
     font-family: Karla-Bold, sans-serif;
   }
@@ -372,15 +384,61 @@
     background-size: 10px 2px; /* Set the size of each dash and space segment */
     width: 60%; /* Set the width to 50% of the container width */
     margin: 40px auto; /* Center the horizontal rule and add margin above and below */
-}
+  }
+
   .our-members {
     font-size: 55px;
+    font-family: Karla-Bold, sans-serif;
+    margin-top: 40px;
+  }
+
+  .center-align {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Karla-Bold, sans-serif;
-    margin-top: 40px;
-
-
+    align-self: center;
   }
+
+  .container  {
+    width: 90vw;
+    height: 110vh;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px; 
+    
+  }
+
+  .three-types-of-people {
+    font-size: 30px;
+    font-family: Karla-Regular, sans-serif;
+  }
+
+  .container-holder  {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 70%;
+    background-color: yellow;
+    margin-top: 30px;
+  }
+
+  .container-child {
+    width: 33%;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    background-color: black;
+  }
+
+  
+
+
+  
+
+
   

@@ -7,9 +7,16 @@
   </head>
 
 <body>  
-    <div class="container flex-row" id = "home-page">
+    <div class="container-welcome" id = "home-page">
+      <div class="center">
+        <!-- <span class="under-text">Welcome to Wreck Racing!</span> -->
+        <span id="typed-element"></span>
+      </div>
+      <div class="container-holder-welcome">
+        
         <!-- gallery area/box with next/back buttons -->
-        <div id = "photo-gallery">
+        <div class="container-child-welcome">
+          <div id = "photo-gallery">
             <!-- need to create an arraylist of these photos and iterate through them -->
             <!-- when pointer points at index, unhide the photo -->
             <!-- image soure must be in reference to index.html doc -->
@@ -18,25 +25,33 @@
             <img src="/static/images/girlyworkin.jpg" alt="girly workin photo" id ="pic3" class="stacked-image">
             <img src="/static/images/2018comp.JPG" alt="2018 comp photo" id ="pic4" class="stacked-image">
             <div class="left-button arrow-buttons" onclick="swipeLeft()"> &lt; </div>
-            <div class="right-button arrow-buttons" onclick="swipeRight()"> > </div>
-            
-            
-        </div>
-        <div class="wreck-description">
-          <div class="center">
-            <span id="typed-element"></span>
+            <div class="right-button arrow-buttons" onclick="swipeRight()"> > </div>   
           </div>
-          <h2 class="our-mission"> Our Mission: </h2>
-          <p class="mission-description">Wreck Racing is an all-student racing team that 
-            builds cars for the 
-            <a href="https://www.grassrootsmotorsports.com/" target="_blank">Grassroots Motorsports $2000 Challenge</a>. 
-            With a tight budget, the 
-            $2000 Challenge favors those with more ingenuity and skill than 
-            money. As many as 100 different teams return each year to battle 
-            it out and see who can squeeze the most performance from a penny. 
-            Our current Challenge build features a Factory Five 818 with a 
-            K-series Honda engine, and a Nissan 300zx body.</p> 
         </div>
+
+        
+        <div class="container-child-welcome"> 
+          <div class="wreck-description">
+            <h2 class="our-mission"> Our Mission: </h2>
+            <p class="mission-description">Wreck Racing is an all-student racing team that 
+              builds cars for the 
+              <a href="https://www.grassrootsmotorsports.com/" target="_blank">Grassroots Motorsports $2000 Challenge</a>. 
+              With a tight budget, the 
+              $2000 Challenge favors those with more ingenuity and skill than 
+              money. As many as 100 different teams return each year to battle 
+              it out and see who can squeeze the most performance from a penny. 
+              Our current Challenge build features a Factory Five 818 with a 
+              K-series Honda engine, and a Nissan 300zx body.
+            </p> 
+          </div>
+
+        </div>
+
+          
+      </div>
+        
+        
+        
     </div>
     
     <hr class="line-break">
@@ -63,8 +78,7 @@
               can tell you anything about cars ranging from normal maintenance to high-performance 
               modifications. More than likely, these people drive a fast car (or more than one of them!)
                and are pretty good at it! They typically join the club because we can offer them one of 
-               the most unique and challenging automotive experiences they will ever have. Building a car that can race hard for two days 
-               straight for $2000 takes a serious engineering effort.
+               the most unique and challenging automotive experiences they will ever have. 
 
             </p>
 
@@ -81,6 +95,11 @@
 
           </div>
         </div>
+        <p id="visit-us">So come on out and visit the Wreck Racing shop. No matter previous experience, members 
+          are able to work on a car that will provide them with welding, CAD design, no end of tuning, 
+          tweaking, cutting, painting, wiring, soldering, taping … well, you get the point. If you love
+           cars and have not found your way to our garage, you don’t know what you are missing! 
+           New members are always accepted no matter their current skill level or major!</p>
       </div>
 
     </div>

@@ -296,7 +296,7 @@
 
   
 
-  #photo-gallery {
+  .photo-gallery {
     display: grid;
     /* max-width: 48%;
     height: 70%; */
@@ -306,14 +306,13 @@
     align-items: center;   
   }
 
-  #photo-gallery img {
+  .photo-gallery img {
     /* position: relative; << this causes the images to overlay the sidebar when its expanded*/ 
     max-width: 100%;
     height: auto;
     grid-area: 1 / 1;
     border-radius: 30px;
     padding: 15px;
-
   }
 
   

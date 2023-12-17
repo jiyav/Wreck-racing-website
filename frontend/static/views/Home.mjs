@@ -12,7 +12,7 @@ export default class extends AbstractView {
     // }
 
     async getScripts() {
-        var str = "/static/js/bundle.js";
+        var str = ["/static/js/bundle.js", "/static/js/home.js"];
         console.log("hello ru working?" + str);
         return str;
     }

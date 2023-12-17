@@ -100,10 +100,14 @@ async function router() {
     //element returned from getParams(match) is paramter for view constructor
     //where did we defined view constructor? default object constructor?
     const view = new match.route.view();
-    console.log(view.getHtml());
+    //console.log(view.getHtml());
     document.querySelector("#app").innerHTML = await view.getHtml();
-    document.querySelector("#script").src = await view.getScripts();
-    
+    var scripts = await view.getScripts();
+    scripts.forEach(function(scriptSource, index) {
+        var script = document.createElement('script');
+        script.src = scriptSource; 
+        document.body.appendChild(script);
+    });
     
   
     console.log("the html now bitch" + document.body.innerHTML);

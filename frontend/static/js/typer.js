@@ -2,11 +2,12 @@
 
 var Typed = require("typed.js");
 var typed = new Typed("#typed-element", {
-  strings: ["Do you like cars?","Join Wreck Racing!"],
-  typeSpeed: 25,
-  backSpeed: 17, //smaller values are faster 
+  strings: ["Welcome to Wreck Racing!", "Scroll to learn more"],
+  typeSpeed: 30,
+  backSpeed: 20, //smaller values are faster 
   loop: true,
-  cursorChar: 'I'
+  cursorChar: 'I',
+  
   });
 
   

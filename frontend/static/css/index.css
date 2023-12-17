@@ -103,7 +103,7 @@
   
   /* Links on mouse-over */
   .sidebar a:hover {
-    background-color: rgb(77, 78, 80);
+    background-color: rgb(0, 0, 0);
     color: white;
   }
   
@@ -235,13 +235,14 @@
     display: inline-block;
     text-align: center;
     padding: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
   }
   
   .buttons a:hover {
     background-color:  rgb(0, 0, 0);
     color: white;
+    font-family: Karla-Bold;
     /* border: 1px solid white; */
     
   }
@@ -258,7 +259,6 @@
 
   #photo-gallery {
     display: grid;
-   
     max-width: 48%;
     height: 70%;
     grid-template-columns: 1fr;
@@ -269,14 +269,17 @@
     
   }
 
-  .stacked-image {
-    position: relative;
+  #photo-gallery img {
+    /* position: relative; << this causes the images to overlay the sidebar when its expanded*/ 
     max-width: 100%;
     height: auto;
     grid-area: 1 / 1;
     border-radius: 30px;
     padding: 15px;
+
   }
+
+  
 
   #pic1 {
     visibility: visible;
@@ -341,7 +344,7 @@
   /* theres a difference between wrapping something in a div vs applying the effects directly to it */
   .center {
     font-family: Karla-Bold, Helvetica, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 10px; 
   }
 
@@ -368,8 +371,8 @@
 
   .wreck-description p {
     font-size: 0.68em;
-    font-family: Karla, sans-serif;
-    font-weight: 200;
+    font-family: Karla-Regular, sans-serif;
+    
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 15px;
@@ -400,11 +403,12 @@
   }
 
   .container  {
-    width: 90vw;
-    height: 110vh;
-    background-color: white;
-    border: 1px solid black;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
     border-radius: 20px; 
+    padding:20px;
     
   }
 
@@ -417,24 +421,67 @@
     position: relative;
     display: flex;
     flex-direction: row; 
-    align-items: center;
+    align-items: center stretch;
     justify-content: center;
-    width: 90%;
-    height: 70%;
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     margin-top: 30px;
   }
 
   .container-child {
+    display: flex;
+    flex-direction: column;
     width: 33%;
-    height: 100%;
-    margin-right: 10px;
-    margin-left: 10px;
-    border: 3px solid #000;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 1px solid #000;
     border-radius: 20px;
-    background-color: black;
+    padding-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    
   }
 
+  /* font specifications for p elemements */
+  .container-child p {
+    font-size: 25px;
+    font-family: Karla-Regular;
+    margin-top: 15px;
+    
+  }
+
+  /* font specifications for header elements */
+  .container-child h2 {
+    font-size: 40px;
+    font-family: Karla-Bold;
+    margin-top: 15px;
+    
+  }
+
+  /* for each div with .numberCircle class */
+  .container-child .numberCircle {
+    width: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    font-family: Karla-Bold;
+    border: 2px solid white;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .orange {
+    background-color: rgb(255, 204, 0);
+  }
+
+  .green {
+    background-color: green;
+  }
   
 
 

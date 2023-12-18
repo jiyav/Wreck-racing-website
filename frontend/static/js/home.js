@@ -4,7 +4,7 @@ console.log(leftButton + "and" + leftButton.length);
 var rightButton = document.querySelectorAll('.right-button');
 console.log(rightButton + "and" + rightButton.length);
 
-var photoIndex = [0, 0];
+var photoIndex = Array(leftButton.length).fill(0);
 
 leftButton.forEach(function(element, index) {
   

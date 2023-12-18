@@ -3,10 +3,9 @@
 
 var Typed = require("typed.js");
 var typed = new Typed("#typed-element", {
-  strings: ["Welcome to Wreck Racing!"],
+  strings: ["Welcome to Wreck Racing"],
   typeSpeed: 30,
   backSpeed: 20, //smaller values are faster 
-  loop: false,
   cursorChar: 'I',
   
   });

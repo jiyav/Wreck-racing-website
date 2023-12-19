@@ -161,7 +161,22 @@
   }
   
   .background {
-    background-image: linear-gradient(100deg,rgb(254, 237, 54), rgb(255, 20, 3));
+    /* background-image: linear-gradient(100deg,rgb(254, 237, 54), rgb(255, 20, 3)); */
+    position: absolute;
+    background-color: transparent;
+  }
+
+  .vid-container {
+    z-index: -1;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.65;
+  }
+
+  .background video { 
+    width: 33vw;
+    height: auto;
   }
   /* The button used to open the sidebar */
   
@@ -210,7 +225,7 @@
     font-family: 'SF Sports Night', sans-serif;
     font-size: 120px; 
     color: rgb(0, 0, 0);
-    text-shadow: 3px 3px 3px red;
+    text-shadow: 3px 3px 3px yellow;
     gap: 5px;
     margin-bottom: 20px;
   }
@@ -266,7 +281,7 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
-    border-radius: 20px; 
+    border-radius: 7px; 
     padding:30px;
     margin-top: 30px;
     /* margin-left:100px;
@@ -308,8 +323,8 @@
     /* position: relative; << this causes the images to overlay the sidebar when its expanded*/ 
     max-width: 100%;
     height: auto;
-    grid-area: 1 / 1;
-    border-radius: 30px;
+    grid-area: 1 /1;
+    border-radius: 20px;
     padding: 15px;
   }
 
@@ -335,8 +350,8 @@
   .arrow-buttons {
     background-color: transparent;
     color: white;
-    height: 70px;
-    width: 70px;
+    height: 40px;
+    width: 40px;
     border-radius: 2px;
     z-index: 10;
     grid-area: 1/1;
@@ -344,7 +359,7 @@
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally*/
     font-family: Karla-Regular;
-    font-size: 30px;
+    font-size: 25px;
     
   }
 
@@ -357,10 +372,12 @@
 
   .right-button {
     justify-self: end;
+    margin-right: 15px;
   }
 
   .left-button {
     justify-self: start;
+    margin-left: 15px;
   }
 
   /* -------------------------------------welcome to wreck racing text-------------------- */
@@ -369,11 +386,11 @@
     flex-direction: column;
     align-items: center; 
     box-sizing: border-box;
-    background-color: white;
+    background-color: transparent;
     font-size: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 10px;
+    
   }
 
   
@@ -388,22 +405,18 @@
     margin-bottom: 10px;;
   }
 
-  
-  .text-box h1 {
-    font-size: 1em;
-    font-family: Karla-Bold, sans-serif;
-  }
+
 
   .text-box h2 {
     font-size: 40px;
     font-family: Karla-Regular, sans-serif;
-    margin-top: 10px;
+    
   }
 
   .text-box p {
-    font-size: 18px;
+    font-size: 15px;
     font-family: Karla-Regular, sans-serif;
-    margin-top: 15px;
+    margin-top: 7px;
     line-height: 1.4;
     margin-right: auto;
   }
@@ -488,7 +501,7 @@
     margin-right: 100px; */
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
-    border-radius: 20px; 
+    border-radius: 7px; 
     padding:20px;
     
   }

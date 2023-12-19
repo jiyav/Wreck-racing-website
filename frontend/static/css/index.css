@@ -115,12 +115,25 @@
     flex-direction: column;
     align-items: center stretch;
     transition: margin-left .5s;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 70px;
+    padding-right: 70px;
     margin-bottom: 30px;;
     /* height: 1000px; */
   }
-  
+  .container-wreck-header  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 221, 0, 0.9);
+    border: 1px solid black;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    padding:20px;
+    margin-top: 20px;
+    /* margin-left:100px;
+    margin-right: 100px; */
+  }
+
   .Wreck {
     margin-right: 30px;
     gap: 8px;
@@ -171,8 +184,10 @@
     position: fixed;
     display: flex;
     flex-direction: row;
-    opacity: 0.65;
+    opacity: 0.7; 
   }
+
+
 
   .background video { 
     width: 33vw;
@@ -245,7 +260,7 @@
   .buttons a {
     width: 200px;
     height: 50px;
-    background-color: rgb(255, 247, 0);
+    background-color: rgb(255, 242, 0);
     color: black;
     font-size: 30px;
     font-family: Karla-Regular;
@@ -281,9 +296,11 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
-    border-radius: 7px; 
+    /* border-radius: 7px;  */
+    border-bottom-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     padding:30px;
-    margin-top: 30px;
+    margin-top: 0px;
     /* margin-left:100px;
     margin-right: 100px; */
   }
@@ -302,9 +319,15 @@
     border-radius: 20px;
     padding-bottom: 10px;
     /* text-align: center; */
-    
     justify-content: center;
-    
+  }
+
+  #width70 {
+    width: 70%;
+  }
+
+  #width30 {
+    width: 30%;
   }
 
   
@@ -426,6 +449,48 @@
     font-size: 19px;
     margin-right: auto;
   }
+  /*--------------------------------timeline---------------------------------------*/
+
+  .timeline-container {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    align-items: center stretch;
+    /* background-color: yellow; */
+  }
+
+  .vertical-line {
+    
+    width: 2px;
+    height: 900px;
+    background-color: #000000; /* Line color */
+  }
+
+  .timeline-items {
+  
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .timeline-dot {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .timeline-item-text {
+
+  }
+
+  
+
 
   /* -------------------------------------pantone cards for cars---------------------------- */
   .pantone-container {
@@ -446,6 +511,12 @@
     border: 1px solid rgb(0, 0, 0);
     font-family: 'Helvetica Neue', sans-serif;
     border-radius: 2px;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  /* on hover, have a side box that pops up with the build book and some extra info/who built it etc */
+  .pantone:hover {
+    transform: scale(1.05);
   }
 
   .pantone .cropped-container {
@@ -458,6 +529,12 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .space  {
+    margin-top: 70px;
+  } 
+
+
 
   .pantone h1 {
     /* font-family: 'Helvetica Neue', sans-serif; */
@@ -486,6 +563,8 @@
     font-size: 55px;
     font-family: Karla-Bold, sans-serif;
     margin-top: 40px;
+    color: black;
+
   }
 
   .center-align {
@@ -499,17 +578,19 @@
   .container  {
     /* margin-left: 100px;
     margin-right: 100px; */
-    background-color: rgb(255, 255, 255);
-    border: 1px solid black;
+    background-color: rgba(255, 255, 255);
+    border: 2px solid white;
     border-radius: 7px; 
     padding:20px;
+   
     
   }
 
   .container p {
-    font-size: 25px;
+    font-size: 18px;
     font-family: Karla, sans-serif;
     font-style: italic;
+    color: black;
     
   }
 
@@ -526,8 +607,9 @@
     flex-direction: row; 
     align-items: center stretch;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     margin-top: 30px;
+
   }
 
   .container-child {
@@ -542,37 +624,47 @@
     text-align: center;
     align-items: center;
     padding: 30px;
+    background-color: white;
     
   }
 
   /* font specifications for p elemements */
   .container .container-child p {
-    font-size: 20px;
+    font-size: 18px;
     font-family: Karla-Regular;
     margin-top: 15px;
     font-style: normal;
+    color: black;
   }
 
   /* font specifications for header elements */
   .container-child h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: Karla-Bold;
     margin-top: 15px;
+    color: black;
     
   }
 
   /* for each div with .numberCircle class */
-  .container-child .numberCircle {
-    width: 70px;
-    line-height: 70px;
+  .numberCircle {
+    width: 60px;
+    line-height: 60px;
     border-radius: 50%;
     text-align: center;
-    font-size: 32px;
+    font-size: 29px;
     font-family: Karla-Bold;
-    border: 1px solid white;
+    border: 1px solid black;
     margin-top: 15px;
-    color: rgb(255, 255, 255);
+    color: black(255, 255, 255);
+    background-color: white;
+    /* mix-blend-mode: lighten; */
+    
+    
   }
+
+  
+
 
   .red {
     background-color: red;

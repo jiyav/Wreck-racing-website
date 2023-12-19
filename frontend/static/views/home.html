@@ -15,7 +15,7 @@
       <div class="container-holder-welcome">
         
         <!-- gallery area/box with next/back buttons -->
-        <div class="container-child-welcome">
+        <div class="container-child-welcome" id = "width70">
           <div class = "photo-gallery">
             <!-- need to create an arraylist of these photos and iterate through them -->
             <!-- when pointer points at index, unhide the photo -->
@@ -30,7 +30,7 @@
         </div>
 
         
-        <div class="container-child-welcome"> 
+        <div class="container-child-welcome" id = "width30"> 
           <div class="text-box">
             <h2 class="our-mission"> Our Mission: </h2>
             <p class="mission-description">Wreck Racing is an all-student racing team that 
@@ -45,113 +45,118 @@
             </p> 
           </div>
 
-        </div>
-
-          
-      </div>
-
-      <div class="container-holder-welcome">
-        <div class="pantone-container">
-          <div class="pantone">
-            <div class="cropped-container">
-              <img src="/static/images/Doris.jpg" alt="Doris">
-            </div>
-            <h1>DORIS</h1>
-            <h2>Some text here</h2>
-          </div>
-  
-          <div class="pantone">
-            <div class="cropped-container">
-              <img src="/static/images/insight.jpg" alt="insight">
-            </div>
-            <h1>INSIGHT</h1>
-            <h2>Some text here</h2>
-          </div>
-  
-          <div class="pantone">
-            <div class="cropped-container">
-              <img src="/static/images/e28.jpg" alt="bmw e28">
-            </div>
-            <h1>BMW E28</h1>
-            <h2>Some text here</h2>
-          </div>
-  
-          <div class="pantone">
-            <div class="cropped-container">
-              <img src="/static/images/mgmidget.jpg" alt="mg midget">
-            </div>
-            <h1>MG MIDGET</h1>
-            <h2>Some text here</h2>
-          </div>
-  
-          <div class="pantone">
-            <div class="cropped-container">
-              <img src="/static/images/s10.jpg" alt="chevy s10">
-            </div>
-            <h1>CHEVY S10</h1>
-            <h2>Some text here</h2>
-          </div>
-
-          <div class="pantone">
-            <div class="cropped-container">
-              <img src="/static/images/s10.jpg" alt="insight">
-            </div>
-            <h1>CHEVY S10</h1>
-            <h2>Some text here</h2>
-          </div>
-  
-        </div>
+        </div> 
 
       </div>
-      
+      <div class="space"> </div>
 
       <div class="container-holder-welcome">
-        <div class="container-child-welcome">
-          
+        <div class="container-child-welcome" id="width30">
+          <!-- text -->
           <div class="text-box">
             <h2 class="Our History"> Our History: </h2>
-            <p>Established in 2003, Wreck Racing has worked on eight competition cars:</p>
-            <ul>
-              <li>1984 VW GTI</li>
-              <li>1985 BMW 325e</li>
-              <li>1992 Mazda Miata</li>
-              <li>1969 MG Midget</li>
-              <li>2001 Honda Insight</li>
-              <li>1986 BMW 528e</li>
-              <li>Chevy S10</li>
-              <li>Factory FIve 818</li>
-            </ul>
-            <p>Competition Results:</p>
-            <ul>
-              <li>In 2017, the Insight placed 1st out of 40 teams </li>
-              <li>In 2018, we came in 2nd overall</li>
-              <li>In 2020, the BMW placed 1st overall</li>
-              <li>In 2022, the S10 place 2nd overall</li>
-              <li>In 2023, the 818 came 2nd in Concourse</li>
-              
-            </ul>
-            
-            
-            
-
+            <p>Established in 2003, Wreck Racing has worked on eight competition cars as seen on the right </p>
           </div>
-        </div>
 
-        <div class="container-child-welcome">
-          
-          <div class = "photo-gallery">
-            <!-- need to create an arraylist of these photos and iterate through them -->
-            <!-- when pointer points at index, unhide the photo -->
-            <!-- image soure must be in reference to index.html doc -->
-            <img src="/static/images/2010comp.JPG" alt="2010 comp photo" id ="pic1" class="stacked-image">
-            <img src="/static/images/2013comp.JPG" alt="2013 comp photo" id ="pic2" class="stacked-image">
-            <img src="/static/images/girlyworkin.jpg" alt="girly workin photo" id ="pic3" class="stacked-image">
-            <img src="/static/images/2018comp.JPG" alt="2018 comp photo" id ="pic4" class="stacked-image">
-            <div class="left-button arrow-buttons" > &lt; </div>
-            <div class="right-button arrow-buttons"> > </div>   
-          
-          </div> 
+          <!-- timeline -->
+          <div class="timeline-container">
+            <div class="vertical-line"></div>
+            <div class="timeline-items">
+              <!-- timeline item list -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-text">
+                  <h2>2003</h2>
+                  <p>Wreck Racing established</p>
+                </div>
+              </div>
+
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-text">
+                  <h2>2010</h2>
+                  <p>cute slay wreck things i msure</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-text">
+                  <h2>2023</h2>
+                  <p>more wreck stuff wee</p>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
         </div>
+        <div class="container-child-welcome" id="width70">
+          <!-- pantone -->
+          <div class="pantone-container">
+            <div class="pantone">
+              <div class="cropped-container">
+                <img src="/static/images/Doris.jpg" alt="Doris">
+              </div>
+              <h1>DORIS</h1>
+              <h2>Some text here</h2>
+            </div>
+    
+            <div class="pantone">
+              <div class="cropped-container">
+                <img src="/static/images/insight.jpg" alt="insight">
+              </div>
+              <h1>2001 Honda Insight</h1>
+              <h2>Some text here</h2>
+            </div>
+    
+            <div class="pantone">
+              <div class="cropped-container">
+                <img src="/static/images/e28.jpg" alt="bmw e28">
+              </div>
+              <h1>BMW E28</h1>
+              <h2>Some text here</h2>
+            </div>
+    
+            <div class="pantone">
+              <div class="cropped-container">
+                <img src="/static/images/mgmidget.jpg" alt="mg midget">
+              </div>
+              <h1>1969 MG Midget</h1>
+              <h2>Some text here</h2>
+            </div>
+    
+            <div class="pantone">
+              <div class="cropped-container">
+                <img src="/static/images/s10.jpg" alt="chevy s10">
+              </div>
+              <h1>CHEVY S10</h1>
+              <h2>Some text here</h2>
+            </div>
+  
+            <div class="pantone">
+              <div class="cropped-container">
+                <img src="/static/images/s10.jpg" alt="insight">
+              </div>
+              <h1>CHEVY S10</h1>
+              <h2>Some text here</h2>
+            </div>
+    
+          </div>
+        </div>   
+      </div>
+
+      
+
+      
+      
+
+      
+
+        
 
         
 
@@ -168,8 +173,9 @@
         <h1 class="our-members">Membership Info</h1>
         <p class="three-types-of-people">There are typically three types of people who will join Wreck Racing:</p>
         <div class="container-holder">
+          
           <div class="container-child">
-            <div class="numberCircle red">1</div>
+            <div class="numberCircle">1</div>
             <h2>Newbies</h2>
             <p>These are people who know very little about cars, but would like to know more. 
               Whether it be driving, fixing, breaking, tuning, or even general maintenance these 
@@ -180,7 +186,7 @@
 
           </div>
           <div class="container-child">
-            <div class="numberCircle orange">2</div>
+            <div class="numberCircle">2</div>
             <h2>Car enthusiast</h2>
             <p>These people are generally experienced gearheads. They know a lot about cars and 
               can tell you anything about cars ranging from normal maintenance to high-performance 
@@ -192,7 +198,9 @@
 
           </div>
           <div class="container-child">
-            <div class="numberCircle green">3</div>
+            <div class="numberCircle">3
+              
+            </div>
             <h2>Car freaks</h2>
             <p>The final type of person usually owns at least two cars 
               (neither of which was purchased for more than $500) and has performed at 

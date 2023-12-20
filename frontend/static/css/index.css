@@ -180,17 +180,19 @@
   }
 
   .vid-container {
+    
+    
     z-index: -1;
     position: fixed;
     display: flex;
     flex-direction: row;
-    opacity: 0.7; 
+    opacity: 1; 
   }
 
 
 
   .background video { 
-    width: 33vw;
+    width: 100%;
     height: auto;
   }
   /* The button used to open the sidebar */
@@ -205,6 +207,10 @@
     }
     .sidebar a {float: left;}
     div.content {margin-left: 0;}
+
+    .vid-container {
+      visibility: collapse;
+    }
   }
   
   /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -239,15 +245,16 @@
   .header-text {
     font-family: 'SF Sports Night', sans-serif;
     font-size: 120px; 
-    color: rgb(0, 0, 0);
-    text-shadow: 3px 3px 3px yellow;
+    color: rgb(0, 0, 0, 0.8);
+    text-shadow: 10px 2px 10px rgb(255, 81, 0);
     gap: 5px;
     margin-bottom: 20px;
+    
   }
   
   .enlarge-letter:hover {
-    transition: transform 0.1s ease;
-    transform: scale(1.08) translateY(-6px); /* Enlarge each letter on hover */
+    transition: transform 0.5s ease;
+    transform: scale(1.1) translateY(-6px); /* Enlarge each letter on hover */
   }
   
   
@@ -428,27 +435,48 @@
     margin-bottom: 10px;;
   }
 
-
+  .text-box h1 {
+    font-size: 50px;
+    font-family: Karla-Regular, sans-serif;
+  }
 
   .text-box h2 {
     font-size: 40px;
     font-family: Karla-Regular, sans-serif;
-    
+  }
+
+  .text-box h3 {
+    font-size: 25px;
+    font-family: Karla-Regular, sans-serif;
   }
 
   .text-box p {
-    font-size: 15px;
+    font-size: 20px;
     font-family: Karla-Regular, sans-serif;
-    margin-top: 7px;
+    margin-top: 3px;
     line-height: 1.4;
     margin-right: auto;
   }
 
   .text-box ul {
-    font-family: Karla-Regular;
-    font-size: 19px;
+    list-style-type: circle;
+    font-family: Karla-Bold;
+    font-size: 15px;
     margin-right: auto;
+    
   }
+
+  .text-box ul ul {
+    list-style-type: circle;
+    font-family: Karla-Regular;
+    font-size: 15px;
+    margin-left: 30px;
+    line-height: 1;
+  }
+
+
+
+
   /*--------------------------------timeline---------------------------------------*/
 
   .timeline-container {
@@ -503,7 +531,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 290px;
+    height: 300px;
     width: 230px;
     background-color: white;
     color: black;
@@ -512,11 +540,12 @@
     font-family: 'Helvetica Neue', sans-serif;
     border-radius: 2px;
     transition: transform 0.4s ease-in-out;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);;
   }
 
   /* on hover, have a side box that pops up with the build book and some extra info/who built it etc */
   .pantone:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   .pantone .cropped-container {
@@ -550,12 +579,15 @@
     margin-right: auto;
   }
 
+  /* -------------------What we do ------------------------------------------------ */
+  
+  
   /* ------------------------------OUR MEMBERS DESCRIPTION-------------------------------- */
   .line-break {
     border: dashed; /* Remove the default border */
     border-width: 1px;
     width: 70%; /* Set the width to 50% of the container width */
-    margin: 25px auto; /* Center the horizontal rule and add margin above and below */
+    margin: 40px auto; /* Center the horizontal rule and add margin above and below */
     color: white;
   }
 
@@ -572,7 +604,7 @@
     flex-direction: column;
     align-items: center;
     align-self: center;
-    text-align: center;
+    
   }
 
   .container  {
@@ -586,6 +618,13 @@
     
   }
 
+  .container h1 {
+    font-size: 50px;
+    font-family: Karla-Bold, sans-serif;
+    color: black;
+
+
+  }
   .container p {
     font-size: 18px;
     font-family: Karla, sans-serif;
@@ -621,7 +660,6 @@
     border: 1px solid #000;
     border-radius: 20px;
     padding-bottom: 10px;
-    text-align: center;
     align-items: center;
     padding: 30px;
     background-color: white;

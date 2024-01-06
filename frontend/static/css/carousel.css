@@ -1,4 +1,7 @@
 /* inspo: https://www.lundevweb.com/2023/11/slider-carousel-style-aerphone-using.html */
+* {
+    font-family: Helvetica, sans-serif;
+}
 .carousel {
     height: 800px;
     position: relative;
@@ -56,21 +59,40 @@
 }
 
 .carousel .list .item .intro {
-    width: 60%;
+    width: 25%;
     height: auto;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    position: absolute;
-    opacity: 0; 
+    position: absolute; 
+    pointer-events: all;
+    opacity: 0;
 }
 
-.carousel .list .item:nth-child(2) .intro{
-    opacity: 1; 
+.carousel .list .item:nth-child(2) .intro {
+    z-index: 10;
+    opacity: 1;
 }
+
+h1 {
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 
 .carousel .list .item .seemore {
     opacity: 0;
+    width: 25%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%;
+    position: absolute; 
+    z-index: 100;
+
 }
 
 /* why doesn't just '.item:nth-child()' work?? */
@@ -191,11 +213,15 @@
 }
 
 /* text carousel animation classes */
-.carousel.prev .list .item:nth-child(2) h1, .carousel.next .list .item:nth-child(2) h1  {
+.carousel.prev .list .item:nth-child(2) .intro h1, .carousel.next .list .item:nth-child(2) .intro h1  {
     animation: positionText 0.5s ease-in-out 1 forwards;
 }
 
-.carousel.prev .list .item:nth-child(2) button, .carousel.next .list .item:nth-child(2) button {
+.carousel.prev .list .item:nth-child(2) .intro p, .carousel.next .list .item:nth-child(2) .intro p  {
+    animation: positionText 0.6s ease-in-out 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .intro button, .carousel.next .list .item:nth-child(2) .intro button {
     animation: positionText 0.7s ease-in-out 1 forwards;
 }
 
@@ -204,8 +230,59 @@
 @keyframes positionText {
     from {
         opacity: 0;
-        filter: blur(30);
-        transform: translateY(80%)
+        /* filter: blur(30); */
+        transform: translateY(100%)
     }
 
+}
+
+/* see more button clicked */
+.carousel.seemore .list .item:nth-child(2) .seemore {
+    animation: SeeMore 0.5s ease-in-out 1 forwards; 
+}
+
+
+.carousel.seemore .list .item img {
+    opacity: 0;
+}
+
+.carousel.seemore .list .item:nth-child(2) img {
+    opacity: 1;
+    animation: SeeMoreImage 0.5s ease-in-out 1 forwards; 
+}
+
+
+
+.carousel.seemore .list .item:nth-child(2) .intro {
+    animation: SeeMoreIntro 0.5s ease-in-out 1 forwards; 
+}
+
+@keyframes SeeMore {
+    from {
+        opacity: 0; 
+        transform: translate(-100%, -50%); 
+        filter: blur(30);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes SeeMoreImage {
+    
+    to {
+        transform: scale(1) translate(30%, -50%);
+    }
+}
+
+@keyframes SeeMoreIntro {
+    to {
+        transform: translate(0, -100%);
+    }
+}
+
+
+
+.carousel.goback {
+    
 }

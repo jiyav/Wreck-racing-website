@@ -1,0 +1,211 @@
+/* inspo: https://www.lundevweb.com/2023/11/slider-carousel-style-aerphone-using.html */
+.carousel {
+    height: 800px;
+    position: relative;
+    /* background-color: yellow; */
+    overflow:hidden;
+}
+:root {
+    --item1-transform: translate(-100%, -50%) scale(0.5);
+    --item1-opacity: 0.5;
+    --item1-z-index: 9;
+    --item1-filter: blur(30px);
+
+    /* --item2-transform: translate(0, 0); */
+    --item2-opacity: 1;
+    --item2-z-index: 10;
+    --item2-filter: blur(0);
+    --item2-transform: translate(-40%, -50%) scale(1.3);
+    --item2-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046);
+
+    --item3-transform: translate(25%, -50%) scale(0.5);
+    --item3-opacity: 0.5;
+    --item3-z-index: 9;
+    --item3-filter: blur(30px);
+}
+
+.carousel .list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 90%;
+    /* background-color: black; */
+    height: 90%;  
+}
+
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    /* background-color: purple; */
+}
+
+.carousel .list .item img {
+    width: 40%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.carousel .list .item .intro {
+    width: 60%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    opacity: 0; 
+}
+
+.carousel .list .item:nth-child(2) .intro{
+    opacity: 1; 
+}
+
+.carousel .list .item .seemore {
+    opacity: 0;
+}
+
+/* why doesn't just '.item:nth-child()' work?? */
+.carousel .list .item:nth-child(1) img {
+    pointer-events: none;
+    filter: var(--item1-filter);
+    transform: var(--item1-transform);
+    opacity: var(--item1-opacity);
+    z-index: var(--item1-z-index); /*why does this z-index need to be higher?*/
+}
+
+.carousel .list .item:nth-child(2) img {
+    z-index: var(--item2-z-index);
+    opacity: var(--item2-opacity);
+    box-shadow: var(--item2-box-shadow);
+    transform: var(--item2-transform);
+}
+
+.carousel .list .item:nth-child(3) img {
+    pointer-events: none;
+    filter: var(--item3-filter);
+    transform: var(--item3-transform);
+    opacity: var(--item3-opacity);
+    z-index: var(--item3-z-index);
+}
+
+.carousel .list .item:nth-child(n + 4) img {
+    opacity: 0;
+    pointer-events: none;
+    filter: blur(30px);
+    
+}
+
+.carousel .buttons {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.carousel .buttons .left {
+    height: 20px;
+    width: 100px;
+}
+
+.carousel .buttons .right {
+    height: 20px;
+    width: 100px;
+}
+
+/* image carousel animation classes */
+.carousel.prev .list .item:nth-child(1) img {
+    animation: positionMiddle 0.5s ease-in-out 1 forwards;
+}
+
+.carousel.next .list .item:nth-child(1) img {
+    animation: positionBehind 0.5s ease-in-out 1 forwards; 
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+    animation: positionRight 0.5s ease-in-out 1 forwards;
+}
+
+.carousel.next .list .item:nth-child(2) img {
+    animation: positionLeft 0.5s ease-in-out 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(3) img {
+    animation: positionBehind 0.5s ease-in-out 1 forwards;
+}
+
+.carousel.next .list .item:nth-child(3) img {
+    animation: positionMiddle 0.5s ease-in-out 1 forwards;
+}
+
+/* image animations */
+@keyframes positionBehind {
+    from {
+        opacity: 0;
+        filter: blur(30px);
+    }
+
+    /* default to, the element's base css properties */
+
+}
+@keyframes positionMiddle {
+    from{
+        z-index: var(--item2-z-index);
+        opacity: var(--item2-opacity);
+        box-shadow: var(--item2-box-shadow);
+    } 
+
+}
+
+@keyframes positionLeft {
+    from{
+        filter: var(--item1-filter);
+        transform: var(--item1-transform);
+        opacity: var(--item1-opacity);
+        z-index: var(--item1-z-index);
+    }
+
+}
+
+@keyframes positionRight {
+    from {
+        filter: var(--item3-filter);
+        transform: var(--item3-transform);
+        opacity: var(--item3-opacity);
+        z-index: var(--item3-z-index);
+    }
+
+}
+
+/* text carousel animation classes */
+.carousel.prev .list .item:nth-child(2) h1, .carousel.next .list .item:nth-child(2) h1  {
+    animation: positionText 0.5s ease-in-out 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) button, .carousel.next .list .item:nth-child(2) button {
+    animation: positionText 0.7s ease-in-out 1 forwards;
+}
+
+
+/* image animations */
+@keyframes positionText {
+    from {
+        opacity: 0;
+        filter: blur(30);
+        transform: translateY(80%)
+    }
+
+}

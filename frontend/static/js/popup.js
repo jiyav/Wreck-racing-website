@@ -1,4 +1,4 @@
-document.getElementById('next').onclick = function(){
+function next() {
     let lists = document.querySelectorAll('.item');
     document.getElementById('slide').appendChild(lists[0]);
     var string5th = document.querySelector('.item:nth-child(5)').style.cssText;
@@ -19,8 +19,14 @@ document.getElementById('next').onclick = function(){
     document.querySelector('.item:nth-child(6)').style.cssText += 'animation: swipeinright 0.5s ease-in-out forwards;';
 
 }
+
+window.onload = next;
+document.getElementById('next').onclick = next;
+    
+
 document.getElementById('prev').onclick = function(){
     let lists = document.querySelectorAll('.item');
+    // not creating a new element, reusing the item
     document.getElementById('slide').prepend(lists[lists.length - 1]);
     var string1th = document.querySelector('.item:nth-child(1)').style.cssText;
     var startIndex1th = string1th.indexOf('animation: ');

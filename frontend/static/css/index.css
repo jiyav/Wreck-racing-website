@@ -189,6 +189,7 @@
     flex-direction: row;
     opacity: 0.8; 
     justify-content: space-between;
+    filter: blur(10);
   }
 
 
@@ -530,6 +531,7 @@
 
 
   /* -------------------------------------pantone cards for cars---------------------------- */
+  /* use pantones for leadership page*/
   .pantone-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 4 columns with equal width */

@@ -14,7 +14,7 @@ rightButton.onclick = function() {
 }
 
 function showSlider(type) {
-    carousel.classList.remove('next', 'prev', 'seemore');
+    carousel.classList.remove('next', 'prev', 'seemore', 'goback');
     var itemList = document.querySelectorAll('.item'); 
     if (type === 'next') {
         list.prepend(itemList[itemList.length - 1]);
@@ -33,9 +33,19 @@ var goback = document.querySelectorAll('.seemore button');
 
 seemore.forEach(function(element) {
     element.addEventListener('click', function seemore() {
+        console.log("seemore");
+        carousel.classList.remove('goback');
         carousel.classList.add('seemore');
     });
   });
+
+goback.forEach(function(element) {
+element.addEventListener('click', function goback() {
+    console.log("goback");
+    carousel.classList.remove('seemore');
+    carousel.classList.add('goback');
+});
+});
 
 
 

@@ -1,0 +1,302 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Helvetica Neue';
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.video-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+    /* background-color: rgba(167, 167, 47, 0.537); */
+    
+}
+
+.noise {
+    /* ... */
+    background:  
+      url(https://grainy-gradients.vercel.app/noise.svg), 
+    contrast(170%) brightness(1000%);
+    z-index: 3;
+  }
+
+
+
+.video-container video {
+    width: 33vw;
+    height: auto;
+    filter: blur(7px);
+    opacity: 80%;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+
+.video-container video:hover {
+    filter: blur(0px);
+    opacity: 100%;
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.wreck-racing-text {
+    /* position: fixed; */
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    height: 200px;
+    width: 850px;
+    z-index: 4; 
+}
+
+.wreck-racing-text h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 175px;
+    transform: scale(1,0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    pointer-events: none;
+    line-height: 0.7;
+     
+    /* text-shadow: 2px 2px 2px #333;   */
+}
+
+.wr-logo {
+    position: absolute;
+    top: -280px;
+    left: 45%;
+    transform: scale(0.2);
+}
+
+.wreck-racing-text h2 {
+    font-family: 'Helvetica Neue';
+    color: white;
+    font-weight: 300;
+    font-size: 40px;
+    font-style: italic;
+    /* transform: scale(0.8,1); */
+}
+
+
+.menu-bar {
+    /* position: fixed; */
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+    justify-content: space-around;
+    max-width: 50vw;
+}
+
+.menu-bar .button {
+    margin: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+    border-bottom: 2px solid white;
+    font-family: 'Helvetica Neue';
+    font-size: 17px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s ease, border-radius 0.2s ease, padding-left 0.2s ease, padding-right 0.2s ease, 
+        border-left 0.5s ease, 
+        border-right 0.5s ease, 
+        border-top 0.7s ease,
+        background-color 0.4s ease;
+    
+}
+
+
+
+.menu-bar .button:hover {
+    /* position: absolute; */
+    transform: scale(1.01);
+    transition: transform 0.2s ease, border-radius 0.2s ease, padding-left 0.2s ease, padding-right 0.2s ease, 
+        border-left 0.5s ease, 
+        border-right 0.5s ease, 
+        border-top 0.7s ease,
+        background-color 0.4s ease, border-bottom 0.2s ease;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    background-color: rgba(186, 189, 35, 0.176);
+    border-radius: 8px;
+    border-bottom: 1px solid white;
+    
+}
+
+.down {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius:50%;
+    transform: translate(48vw, 85vh);
+  }
+  
+  /* a {
+    display: inline-block;
+    border-radius: 50%;
+  } */
+
+.bottom {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.1em solid #ffffff;
+    border-radius: 50%;
+    
+    text-align: center;
+    margin-left: 0.75em;
+  }
+  
+  .bottom:after {
+    
+    content: '';
+    display: inline-block;
+    margin-top: 0.69em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.2em solid #ffffff;
+    border-right: 0.2em solid #ffffff;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    
+  }
+
+  
+  
+  .down:hover .bottom{
+    border: 0.1em solid #000000;
+  }
+  
+  .down:hover .bottom:after{
+    border-top: 0.2em solid #000000;
+    border-right: 0.2em solid #000000;
+  }
+
+  .scrolling-box-background {
+    position: absolute;
+    transform: translate(0, 95%);
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 2fr 1fr; 
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    text-align: center;
+    gap: 0px;
+    margin-top: 0px;
+  }
+
+  .scrolling-box {
+    position: relative;
+    transform: translate(0, 95%);
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    text-align: center;
+    gap: 0px;
+    margin-top: 0px;
+  }
+
+  .scrolling-box .grid-box {
+    background-color: #ffffff;
+    border: 1px solid black;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-family: 'Helvetic Neue';
+    
+  }
+
+  .grid-box h1 { 
+    font-weight: 500;
+    font-size: 50px;
+  }
+  .grid-box h2 {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Helvetica Neue';
+    
+  }
+ 
+
+  .grid-box:nth-child(6), .grid-box:nth-child(7), .grid-box:nth-child(10), .grid-box:nth-child(11) {
+    background-color: transparent;
+    border: 1px none black;
+  }  
+  .grid-box:nth-child(1):hover, .grid-box:nth-child(16):hover {
+    background-color: red;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .grid-box:nth-child(3):hover, .grid-box:nth-child(14):hover {
+    background-color: orange;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .grid-box:nth-child(8):hover, .grid-box:nth-child(9):hover {
+    background-color: rgb(230, 230, 3);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .grid-box:hover:nth-child(2), .grid-box:hover:nth-child(4), .grid-box:hover:nth-child(5),
+  .grid-box:hover:nth-child(13), .grid-box:hover:nth-child(12), .grid-box:hover:nth-child(15)    {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .scrolling-box-background .center-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin:1px 1px 1px 1px;
+        
+  }
+
+  .blur-animation {
+    animation: blurEffect 1s ease-in-out 1 forwards;
+  }
+
+  @keyframes blurEffect {
+    from {
+        filter: blur(3px);
+    }
+    to {
+        filter: blur(0px);
+    }
+
+  }
+  

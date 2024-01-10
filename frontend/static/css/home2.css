@@ -11,13 +11,13 @@ html {
     scroll-behavior: smooth;
 }
 .video-container {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: row;
     margin: 0px;
     align-items: center;
     justify-content: space-between;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     /* background-color: rgba(167, 167, 47, 0.537); */
     
 }
@@ -143,7 +143,7 @@ html {
     border-bottom: 1px solid white;
     
 }
-
+/* 
 .down {
     position: relative;
     display: inline-block;
@@ -155,7 +155,7 @@ html {
   /* a {
     display: inline-block;
     border-radius: 50%;
-  } */
+  } 
 
 .bottom {
     display: inline-block;
@@ -183,8 +183,6 @@ html {
     
   }
 
-  
-  
   .down:hover .bottom{
     border: 0.1em solid #000000;
   }
@@ -192,7 +190,7 @@ html {
   .down:hover .bottom:after{
     border-top: 0.2em solid #000000;
     border-right: 0.2em solid #000000;
-  }
+  } */
 
   .scrolling-box-background {
     position: absolute;
@@ -286,17 +284,55 @@ html {
         
   }
 
-  .blur-animation {
-    animation: blurEffect 1s ease-in-out 1 forwards;
+  .center-grid.blur-animation img  {
+    animation: blurEffect 0.5s ease-in-out 1 ;
   }
 
   @keyframes blurEffect {
     from {
-        filter: blur(3px);
+        opacity: 50%;
+        filter: blur(5px);
     }
     to {
         filter: blur(0px);
     }
 
+  }
+
+  .about{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: transparent;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    transform: translate(0%, 100%);
+    gap:2px;
+  }
+
+  .about div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: white;
+    z-index: 3;
+    mix-blend-mode: difference;
+  }
+
+  .about div:hover {
+    mix-blend-mode: difference;
+    background: white;
+    color: transparent;
+    
+  }
+
+  .about div h1 {
+    font-style: 'Helvetic Neue';
+    font-weight: 300;
+    font-size: 100px;
   }
   

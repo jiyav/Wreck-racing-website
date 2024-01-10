@@ -10,6 +10,7 @@ imageGrids.forEach(function(element, index) {
         console.log(index);
         centerGridImage.src = imgArr[index];
         centerGridImage.classList.add("blur-animation");
+        console.log(centerGridImage.classList);
         
     });
   });

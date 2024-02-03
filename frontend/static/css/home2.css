@@ -194,11 +194,11 @@ html {
 
   .scrolling-box-background {
     position: absolute;
-    transform: translate(0, 95%);
-    background-color: black;
+    transform: translate(0%, 100%);
+    background-color: transparent;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; 
-    grid-template-rows: 1fr 2fr 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr; 
     width: 100%;
     height: 100vh;
     scroll-behavior: smooth;
@@ -207,9 +207,27 @@ html {
     margin-top: 0px;
   }
 
+  
+
+  .scrolling-box-background .center-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.center-grid {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: white;
+  
+  
+}
+
   .scrolling-box {
     position: relative;
-    transform: translate(0, 95%);
+    transform: translate(0%, 100%);
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -223,14 +241,14 @@ html {
   }
 
   .scrolling-box .grid-box {
-    background-color: #ffffff;
-    border: 1px solid black;
+    background-color: transparent;
+    border: 1px solid white;
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: black;
+    color: white;
     font-family: 'Helvetic Neue';
     
   }
@@ -249,7 +267,7 @@ html {
 
   .grid-box:nth-child(6), .grid-box:nth-child(7), .grid-box:nth-child(10), .grid-box:nth-child(11) {
     background-color: transparent;
-    border: 1px none black;
+    border: 1px solid white;
   }  
   .grid-box:nth-child(1):hover, .grid-box:nth-child(16):hover {
     background-color: red;
@@ -276,28 +294,7 @@ html {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  .scrolling-box-background .center-grid img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin:1px 1px 1px 1px;
-        
-  }
-
-  .center-grid.blur-animation img  {
-    animation: blurEffect 0.5s ease-in-out 1 ;
-  }
-
-  @keyframes blurEffect {
-    from {
-        opacity: 50%;
-        filter: blur(5px);
-    }
-    to {
-        filter: blur(0px);
-    }
-
-  }
+  
 
   .about{
     display: grid;
@@ -311,6 +308,22 @@ html {
     gap:2px;
   }
 
+  .about.text-reveal div {
+    animation: textReveal 0.3s ease;
+  }
+
+  .about.text-reveal p {
+    animation: textReveal 0.5s ease;
+  }
+
+  @keyframes textReveal {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+
   .about div{
     display: flex;
     justify-content: center;
@@ -318,21 +331,34 @@ html {
     text-align: center;
     border-radius: 3px;
     border: 1px solid white;
-    color: white;
     z-index: 3;
-    mix-blend-mode: difference;
+
   }
 
   .about div:hover {
-    mix-blend-mode: difference;
     background: white;
-    color: transparent;
-    
   }
 
+ 
   .about div h1 {
+    position: absolute;
     font-style: 'Helvetic Neue';
     font-weight: 300;
     font-size: 100px;
+    color: white;
   }
-  
+
+  .about div p{
+    z-index: 4;
+    
+    opacity: 0;
+    color: black
+    
+  }
+  .about div:hover h1 {
+    opacity: 0;
+  }
+
+  .about div:hover p{
+    opacity: 1;
+  }

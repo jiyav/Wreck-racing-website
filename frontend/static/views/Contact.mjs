@@ -5,6 +5,12 @@ export default class extends AbstractView {
         super("Contact", "contact.html");
     }
 
+    async getScripts() {
+        var str = ["/static/js/bundle.js"];
+        console.log("hello ru working?" + str);
+        return str;
+    }
+
     // async getHtml() {
     //     return `
     //         <h1>Contact</h1>

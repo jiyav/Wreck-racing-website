@@ -4,51 +4,6 @@ import Leadership from "../views/Leadership.mjs";
 import Gallery from "../views/Gallery.mjs";
 import Contact from "../views/Contact.mjs";
 
-//const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
-//returns a regExPathArray
-// function pathToRegex(path) {
-//     return new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
-// }
-
-
-
-
-//original
-// const getParams0 = match => {
-//     const values = match.result.slice(1);
-//     const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
-
-//     //define a callback function inside the map method
-//     //Object.fromEntries converts array with subarray holding key values key-value pair objects
-//     return Object.fromEntries(keys.map((element, index) => {
-//         //replace each element of original array w this RETURNED altered value
-//         //map(array element, index, entire array)
-//         //replace array element with an array that contains two values, a 2-d array
-//         //basically creates a key-value pair array
-//         return [element, values[index]];
-//     }));
-// };
-
-
-// function getParams(match) {
-//     const values = match.result; 
-//     const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(function(element) {
-//         return element[1]; 
-//     })
-
-//     function func() {
-//         return keys.map(function(element, index) {
-//             return [element, values[i]];
-//         })
-//     }
-
-//     const arr = Object.fromEntries(func());
-//     return arr;
-
-// }
-
-
-
 function navigateTo(url) {
     //history API, history.pushState(state, title, url). basically adds a new entry to browsers history
     //changes the URL displayed in the browser's address bar without triggering a full page reload.
@@ -60,11 +15,11 @@ function navigateTo(url) {
 async function router() {
     //routes is an array of objects
     const routes = [
+        // Home, About, Join, Team, Shop
         { path: "/Home", view: Home },
-        { path: "/Projects", view: Projects },
-        { path: "/Leadership", view: Leadership }, 
-        { path: "/Gallery", view: Gallery }, 
-        { path: "/Contact", view: Contact }
+        { path: "/Cars", view: Projects },
+        { path: "/Team", view: Leadership }, 
+        { path: "/Shop", view: Contact }
     ];
 
     //array of route + null marker object

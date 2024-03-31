@@ -4,6 +4,7 @@ export default class {
     constructor(title, htmlFile) {
         document.title = title;
         this.htmlFile = htmlFile;
+        
         //document.scripts = htmlFile.scripts;
     }
 
@@ -16,7 +17,7 @@ export default class {
     }
 
     async getScripts() {
-        return "";
+        return ""
     }
 
     

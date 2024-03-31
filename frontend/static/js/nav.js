@@ -1,5 +1,5 @@
 var boxElement = document.getElementById("box");
-var content = document.getElementById("content");
+var content = document.getElementById("app");
 var isOpen = false; //starts off as false!
 
   // Define the toggle function
@@ -11,22 +11,24 @@ var isOpen = false; //starts off as false!
     //open sideBar
     if (isOpen) {
         document.getElementById("mySideBar").style.width = "250px";
-        document.getElementById("content").style.marginLeft = "250px";
-        document.querySelector(".hamburger-box").style.marginLeft = "250px";
-        document.querySelector(".bar.a").classList.toggle("rotated-in");
-        document.querySelector(".bar.c").classList.toggle("rotated-out");
-        document.querySelector(".bar.b").classList.toggle("hidden");
+        document.querySelector(".hamburger-box").style.marginLeft = "200px";
+        document.querySelector(".bar.a").classList.remove("rotated-out");
+        document.querySelector(".bar.a").classList.add("rotated-in");
+        document.querySelector(".bar.c").classList.remove("rotated-in");
+        document.querySelector(".bar.c").classList.add("rotated-out");
+        document.querySelector(".bar.b").classList.add("hidden");
         
         
     //closes sidebar, turns button into hamburger lines
     //close sideBar
     } else if (!isOpen) {
         document.getElementById("mySideBar").style.width = "0";
-        document.getElementById("content").style.marginLeft = "0px";
         document.querySelector(".hamburger-box").style.marginLeft = "0px";
-        document.querySelector(".bar.a").classList.toggle("rotated-in");
-        document.querySelector(".bar.c").classList.toggle("rotated-out");
-        document.querySelector(".bar.b").classList.toggle("hidden");
+        document.querySelector(".bar.a").classList.remove("rotated-in");
+        document.querySelector(".bar.a").classList.add("rotated-out");
+        document.querySelector(".bar.c").classList.remove("rotated-out");
+        document.querySelector(".bar.c").classList.add("rotated-in");
+        document.querySelector(".bar.b").classList.remove("hidden");
   }
   
   }
@@ -42,7 +44,6 @@ var isOpen = false; //starts off as false!
         document.querySelector(".bar.c").classList.toggle("rotated-out");
         document.querySelector(".bar.b").classList.toggle("hidden");
         document.getElementById("mySideBar").style.width = "0";
-        document.getElementById("content").style.marginLeft = "0px";
         document.querySelector(".hamburger-box").style.marginLeft = "0px";
     }
 

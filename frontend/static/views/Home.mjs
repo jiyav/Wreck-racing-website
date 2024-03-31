@@ -4,7 +4,7 @@ import AbstractView from "./AbstractView.mjs";
 
 export default class extends AbstractView {
     constructor() {
-        super("Home", "home.html");  
+        super("Home", "home2.html");  
     }
 
     // async getHtml() {   
@@ -12,7 +12,7 @@ export default class extends AbstractView {
     // }
 
     async getScripts() {
-        var str = ["/static/js/bundle.js", "/static/js/home.js"];
+        var str = ["/static/js/bundle.js", "/static/js/home2.js"];
         console.log("hello ru working?" + str);
         return str;
     }

@@ -2,7 +2,7 @@ import AbstractView from "./AbstractView.mjs";
 
 export default class extends AbstractView {
     constructor() {
-        super("Projects", "projects.html");
+        super("Projects", "carousel.html");
         
     }
 
@@ -17,7 +17,7 @@ export default class extends AbstractView {
     // }
 
     async getScripts() {
-        var str = "/static/js/bundle.js";
+        var str = ["/static/js/bundle.js", "/static/js/carousel.js"];
         console.log("hello ru working?" + str);
         return str;
     }

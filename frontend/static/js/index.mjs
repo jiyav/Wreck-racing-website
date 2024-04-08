@@ -19,7 +19,6 @@ async function router() {
         { path: "/Home", view: Home },
         { path: "/Cars", view: Projects },
         { path: "/Team", view: Leadership }, 
-        { path: "/Shop", view: Contact }
     ];
 
     //array of route + null marker object

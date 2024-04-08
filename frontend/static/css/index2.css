@@ -21,6 +21,7 @@
     margin-left: 0px;
     transition: margin-left .5s;
     z-index: 101;
+    border-bottom-right-radius: 3px;
     
   }
   .hamburger-box:hover {

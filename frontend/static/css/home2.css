@@ -342,9 +342,10 @@
 
   .about div p{
     z-index: 4;
-    
     opacity: 0;
     color: black;
+    padding: 30px;
+    font-size: 1em;
     
   }
   .about div:hover h1 {
